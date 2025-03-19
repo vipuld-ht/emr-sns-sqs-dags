@@ -32,7 +32,7 @@ EMR_STEPS = [
         "ActionOnFailure": "CONTINUE",
         "HadoopJarStep": {
             "Jar": "command-runner.jar",
-            "Args": ["spark-submit", "--deploy-mode", "cluster", "s3://insightrag-job-config/emr/spark_manage_file.py"]
+            "Args": ["spark-submit", "--deploy-mode", "cluster", "s3://insightrag-job-config/emr/csv_salary_filter.py"]
         },
     }
 ]
