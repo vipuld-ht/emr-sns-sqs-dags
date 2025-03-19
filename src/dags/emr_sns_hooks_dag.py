@@ -79,19 +79,19 @@ with DAG(
     create_emr_cluster_task = PythonOperator(
         task_id="create_emr_cluster",
         python_callable=create_emr_cluster,
-	    trigger_rule='all_success'
+	trigger_rule='all_success'
     )
 
     add_steps_task = PythonOperator(
         task_id="add_steps",
         python_callable=add_steps_to_emr,
-	    trigger_rule='all_success'
+	trigger_rule='all_success'
     )
 
     send_sns_task = PythonOperator(
         task_id="send_sns_notification",
         python_callable=send_sns_notification,
-	    trigger_rule='all_success'
+	trigger_rule='all_success'
     )
 
     send_sqs_task = PythonOperator(
